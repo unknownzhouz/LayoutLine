@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="InsideLine">
+        <!--线条位置-->
+        <attr name="line_gravity">
+            <flag name="Left" value="0x01" />
+            <flag name="Top" value="0x02" />
+            <flag name="Right" value="0x04" />
+            <flag name="Bottom" value="0x08" />
+        </attr>
+        <!--线条颜色-->
+        <attr name="line_color" format="color" />
+        <!--线条高度-->
+        <attr name="line_size" format="dimension" />
+
+        <!--左线高度、颜色、前后偏移量-->
+        <attr name="line_left_size" format="dimension" />
+        <attr name="line_left_color" format="color" />
+        <attr name="line_left_start" format="dimension" />
+        <attr name="line_left_end" format="dimension" />
+
+        <!--右线高度、颜色、前后偏移量-->
+        <attr name="line_right_size" format="dimension" />
+        <attr name="line_right_color" format="color" />
+        <attr name="line_right_start" format="dimension" />
+        <attr name="line_right_end" format="dimension" />
+
+
+        <!--上线高度、颜色、前后偏移量-->
+        <attr name="line_top_size" format="dimension" />
+        <attr name="line_top_color" format="color" />
+        <attr name="line_top_start" format="dimension" />
+        <attr name="line_top_end" format="dimension" />
+
+
+        <!--下线高度、颜色、前后偏移量-->
+        <attr name="line_bottom_size" format="dimension" />
+        <attr name="line_bottom_color" format="color" />
+        <attr name="line_bottom_start" format="dimension" />
+        <attr name="line_bottom_end" format="dimension" />
+
+
+        <!--&lt;!&ndash;无用内容&ndash;&gt;-->
+        <!--&lt;!&ndash;水平中线高度、颜色、前后偏移量&ndash;&gt;-->
+        <!--<attr name="line_middle_h_size" format="dimension" />-->
+        <!--<attr name="line_middle_h_color" format="color" />-->
+        <!--<attr name="line_middle_h_start" format="dimension" />-->
+        <!--<attr name="line_middle_h_end" format="dimension" />-->
+
+        <!--&lt;!&ndash;垂直中线高度、颜色、前后偏移量&ndash;&gt;-->
+        <!--<attr name="line_middle_v_size" format="dimension" />-->
+        <!--<attr name="line_middle_v_color" format="color" />-->
+        <!--<attr name="line_middle_v_start" format="dimension" />-->
+        <!--<attr name="line_middle_v_end" format="dimension" />-->
+    </declare-styleable>
+
+
+</resources>
