@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+
+    <com.nick.widget.InsideLineLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp"
+
+        app:line_bottom_color="@color/color9"
+        app:line_bottom_end="20dp"
+        app:line_bottom_size="5dp"
+        app:line_bottom_start="5dp"
+        app:line_gravity="Top|Left|Right|Bottom"
+
+        app:line_left_color="@color/color13"
+        app:line_left_size="2dp"
+
+        app:line_right_color="@color/color4"
+        app:line_right_end="10dp"
+        app:line_right_size="3dp"
+        app:line_right_start="10dp"
+
+        app:line_top_color="@color/color12"
+        app:line_top_size="2dp"
+        app:line_top_start="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上下左右线条对应颜色、大小、前后偏移" />
+    </com.nick.widget.InsideLineLinearLayout>
+
+
+    <com.nick.widget.InsideLineLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/color8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:line_bottom_color="@color/color12"
+        app:line_bottom_size="1dp"
+        app:line_bottom_start="10dp"
+        app:line_gravity="Bottom">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_new" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="这是底部下划线" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow" />
+
+    </com.nick.widget.InsideLineLinearLayout>
+
+
+    <com.nick.widget.InsideLineConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/color8"
+        android:padding="15dp"
+
+        app:line_bottom_color="@color/color12"
+        app:line_bottom_size="2dp"
+        app:line_gravity="Left|Bottom"
+        app:line_left_color="@color/color13"
+
+        app:line_left_end="15dp"
+        app:line_left_size="8dp"
+        app:line_left_start="15dp">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="这是标题~"
+            android:textColor="@color/color3"
+            app:layout_constraintBottom_toTopOf="@+id/tvContent" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是一段描述文本111~~~~"
+            android:textColor="@color/color3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.nick.widget.InsideLineConstraintLayout>
+
+
+    <com.nick.widget.InsideLineFrameLayout
+        android:id="@+id/lineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/color8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="25dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="动态显示 线条颜色、大小、前后偏移" />
+</com.nick.widget.InsideLineFrameLayout>
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_vertical"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="位置：" />
+
+<TextView
+    android:id="@+id/tvGravity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color8"
+    android:padding="10dp"
+    android:text="LEFT"
+    android:textColor="@color/color4" />
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:text="颜色：" />
+
+<TextView
+    android:id="@+id/tvColor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color8"
+    android:padding="10dp"
+    android:text="#FFFFFF"
+    android:textColor="@color/color9" />
+
+</LinearLayout>
+
+
+<LinearLayout
+
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_vertical"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="大小：" />
+
+<SeekBar
+    android:id="@+id/seekBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" />
+</LinearLayout>
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_vertical"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="前偏移量：" />
+
+<SeekBar
+    android:id="@+id/seekBarStart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" />
+</LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_vertical"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="后偏移量：" />
+
+<SeekBar
+    android:id="@+id/seekBarEnd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" />
+</LinearLayout>
+
+
+    </LinearLayout>
