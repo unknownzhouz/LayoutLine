@@ -32,7 +32,7 @@ public class BehaviorLine {
         if (null != attrs) {
             TypedArray a = targetView.getContext().obtainStyledAttributes(attrs, R.styleable.InsideLine);
             // 默认线的位置、高度，颜色
-            int lineGravity = a.getInt(R.styleable.InsideLine_line_gravity, -1);
+            int lineGravity = a.getInt(R.styleable.InsideLine_line_gravity, 0);
             int lineColor = a.getColor(R.styleable.InsideLine_line_color, 0);
             float lineSize = a.getDimension(R.styleable.InsideLine_line_size, 0);
             if ((lineGravity & InsideLineSupport.Gravity.LEFT) != 0) {
