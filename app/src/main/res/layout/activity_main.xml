@@ -8,7 +8,6 @@
     android:orientation="vertical"
     android:padding="15dp">
 
-
     <com.nick.widget.InsideLineLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,107 +127,107 @@
         android:padding="25dp">
 
 
-    <TextView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="动态显示 线条颜色、大小、前后偏移" />
+    </com.nick.widget.InsideLineFrameLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="动态显示 线条颜色、大小、前后偏移" />
-</com.nick.widget.InsideLineFrameLayout>
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="位置：" />
+
+        <TextView
+            android:id="@+id/tvGravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color8"
+            android:padding="10dp"
+            android:text="LEFT"
+            android:textColor="@color/color4" />
 
 
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:gravity="center_vertical"
-android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="颜色：" />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="位置：" />
-
-<TextView
-    android:id="@+id/tvGravity"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@color/color8"
-    android:padding="10dp"
-    android:text="LEFT"
-    android:textColor="@color/color4" />
-
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="50dp"
-    android:text="颜色：" />
-
-<TextView
-    android:id="@+id/tvColor"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@color/color8"
-    android:padding="10dp"
-    android:text="#FFFFFF"
-    android:textColor="@color/color9" />
-
-</LinearLayout>
-
-
-<LinearLayout
-
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:gravity="center_vertical"
-android:orientation="horizontal">
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="大小：" />
-
-<SeekBar
-    android:id="@+id/seekBarSize"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp" />
-</LinearLayout>
-
-
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:gravity="center_vertical"
-android:orientation="horizontal">
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="前偏移量：" />
-
-<SeekBar
-    android:id="@+id/seekBarStart"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp" />
-</LinearLayout>
-
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:gravity="center_vertical"
-android:orientation="horizontal">
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="后偏移量：" />
-
-<SeekBar
-    android:id="@+id/seekBarEnd"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp" />
-</LinearLayout>
-
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color8"
+            android:padding="10dp"
+            android:text="#FFFFFF"
+            android:textColor="@color/color9" />
 
     </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大小：" />
+
+        <SeekBar
+            android:id="@+id/seekBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前偏移量：" />
+
+        <SeekBar
+            android:id="@+id/seekBarStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="后偏移量：" />
+
+        <SeekBar
+            android:id="@+id/seekBarEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
