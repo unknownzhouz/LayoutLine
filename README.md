@@ -1,12 +1,10 @@
-# LayoutLine
-
-### 介绍
+## LayoutLine
 
 当前库提供了在一些常用的布局中增加上、下、左、右、等组合线条的使用，减少一些控件在对线布局中的嵌套，目前使用环境针对的是常用线性布局、帧布局、相对布局、以及最新的约束布局。
 
 ### 使用
 
-```
+```xml
  <com.nick.widget.InsideLineLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,8 +28,6 @@
 
 ```
 
-
-
 | 线的属性      | 描述             | 格式 |
 | :--------    | :-------------------     | :--------    |
 | line_gravity | 位置 | Left\|Top\|Right\|Bottom |
@@ -54,4 +50,20 @@
 | line_bottom_start | 下线前偏移量       | dimension |
 | line_bottom_end   | 下线后偏移量       | dimension |
 
+### Gradle集成
 
+在 project `build.gradle` 添加 `maven` 仓库
+
+```java
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+在 module `build.gradle` 添加依赖
+
+```java
+implementation 'com.github.unknownzhouz:LayoutLine:0.1.6'
+```
