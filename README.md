@@ -65,5 +65,5 @@ allprojects {
 在 module `build.gradle` 添加依赖
 
 ```java
-implementation 'com.github.unknownzhouz:LayoutLine:0.1.6'
+implementation 'com.github.unknownzhouz:LayoutLine:0.1.7'
 ```
