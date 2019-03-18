@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 16
-        versionName "0.1.6"
+        versionCode 17
+        versionName "0.1.7"
     }
 
 }
@@ -16,5 +16,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha3'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
 }
