@@ -7,9 +7,8 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
 
-
     defaultConfig {
-        applicationId "com.nick.linelayout"
+        applicationId "com.nick.linelayout.demo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -38,6 +37,11 @@ dependencies {
 //    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 
 
-    implementation 'com.github.unknownzhouz:LayoutLine:0.1.7'
+    implementation "androidx.appcompat:appcompat:1.2.0"
+
+//    implementation 'com.github.unknownzhouz:LayoutLine:0.1.8'
+
+    implementation project(':library')
+
 
 }
