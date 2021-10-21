@@ -28,6 +28,10 @@
 
 ```
 
+![](D:\Github\LayoutLine\static\1634797308(1).png)
+
+
+
 | 线的属性      | 描述             | 格式 |
 | :--------    | :-------------------     | :--------    |
 | line_gravity | 位置 | Left\|Top\|Right\|Bottom |

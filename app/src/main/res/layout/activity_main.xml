@@ -88,18 +88,16 @@
         app:line_bottom_size="2dp"
         app:line_gravity="Left|Bottom"
         app:line_left_color="@color/color13"
-
         app:line_left_end="15dp"
         app:line_left_size="8dp"
         app:line_left_start="15dp">
-
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="这是标题~"
+            android:text="标题内容"
             android:textColor="@color/color3"
             app:layout_constraintBottom_toTopOf="@+id/tvContent" />
 
@@ -107,7 +105,7 @@
             android:id="@+id/tvContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="这是一段描述文本111~~~~"
+            android:text="这是一段描述文本简介"
             android:textColor="@color/color3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

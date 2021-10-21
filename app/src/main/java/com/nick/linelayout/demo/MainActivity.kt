@@ -5,16 +5,25 @@ import android.os.Bundle
 import android.util.SparseArray
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.nick.widget.InsideLineSupport
-import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.app.AppCompatActivity
+import com.nick.widget.InsideLineFrameLayout
+import com.nick.widget.InsideLineSupport
 
 
 class MainActivity : AppCompatActivity() {
 
     private var _attr: Attr? = null
     private val _array = SparseArray<Attr>()
+
+    private var tvGravity: TextView? = null
+    private var tvColor: TextView? = null
+    private var lineLayout: InsideLineFrameLayout? = null
+
+    private var seekBarSize: SeekBar? = null
+    private var seekBarStart: SeekBar? = null
+    private var seekBarEnd: SeekBar? = null
 
     init {
         _array.put(InsideLineSupport.Gravity.LEFT, Attr(InsideLineSupport.Gravity.LEFT))
@@ -32,13 +41,15 @@ class MainActivity : AppCompatActivity() {
 
         initView()
         resetPosition()
+
     }
 
     private fun initView() {
-        tvGravity.setOnClickListener {
+        tvGravity = findViewById<TextView>(R.id.tvGravity)
+        tvGravity?.setOnClickListener {
 
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("请选择位置")
+            builder.setTitle("请选择方向")
             builder.setItems(menuPosition) { dialog, which ->
                 dialog.dismiss()
                 var gravity = -1
@@ -58,13 +69,14 @@ class MainActivity : AppCompatActivity() {
             builder.create().show()
         }
 
-        tvColor.setOnClickListener {
+        tvColor = findViewById<TextView>(R.id.tvColor)
+        tvColor?.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("请选择颜色")
+            builder.setTitle("请选择色值")
             builder.setItems(menuColor) { dialog, which ->
                 dialog.dismiss()
-                tvColor.text = menuColor[which]
-                if(menuColor[which] != _attr?.color){
+                tvColor?.text = menuColor[which]
+                if (menuColor[which] != _attr?.color) {
                     _attr?.color = menuColor[which]
                     update()
                 }
@@ -73,8 +85,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        lineLayout = findViewById<InsideLineFrameLayout>(R.id.lineLayout)
 
-        seekBarSize.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+        seekBarSize = findViewById<SeekBar>(R.id.seekBarSize)
+        seekBarSize?.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (_attr?.size != progress.toFloat()) {
                     _attr?.size = progress.toFloat()
@@ -90,7 +104,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        seekBarStart.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+        seekBarStart = findViewById<SeekBar>(R.id.seekBarStart)
+        seekBarStart?.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (_attr?.start != progress.toFloat()) {
                     _attr?.start = progress.toFloat()
@@ -105,7 +120,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        seekBarEnd.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+        seekBarEnd = findViewById<SeekBar>(R.id.seekBarEnd)
+        seekBarEnd?.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (_attr?.end != progress.toFloat()) {
                     _attr?.end = progress.toFloat()
@@ -125,13 +141,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun update() {
         _attr?.let {
-            lineLayout.setLine(it.gravity, it.size, Color.parseColor(it.color), it.start, it.end)
+            lineLayout?.setLine(it.gravity, it.size, Color.parseColor(it.color), it.start, it.end)
         }
     }
 
     private fun resetPosition() {
         _attr?.let {
-            tvGravity.text = when (it.gravity) {
+            tvGravity?.text = when (it.gravity) {
                 InsideLineSupport.Gravity.LEFT -> menuPosition[0]
                 InsideLineSupport.Gravity.TOP -> menuPosition[1]
                 InsideLineSupport.Gravity.RIGHT -> menuPosition[2]
@@ -141,12 +157,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            tvColor.text = it.color
-
-            seekBarSize.progress = it.size.toInt()
-            seekBarStart.progress = it.start.toInt()
-            seekBarEnd.progress = it.end.toInt()
-            lineLayout.setLine(it.gravity, it.size, Color.parseColor(it.color), it.start, it.end)
+            tvColor?.text = it.color
+            seekBarSize?.progress = it.size.toInt()
+            seekBarStart?.progress = it.start.toInt()
+            seekBarEnd?.progress = it.end.toInt()
+            lineLayout?.setLine(it.gravity, it.size, Color.parseColor(it.color), it.start, it.end)
         }
     }
 
