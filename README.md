@@ -28,12 +28,10 @@
 
 ```
 
-![](D:\Github\LayoutLine\static\1634800863(1).png)
-
-
+![image](https://github.com/unknownzhouz/LayoutLine/blob/master/static/1634800863(1).png)
 
 | 线的属性      | 描述             | 格式 |
-| :--------    | :-------------------     | :--------    |
+| --------:    | :-------------------     | :--------    |
 | line_gravity | 位置 | Left\|Top\|Right\|Bottom |
 | line_color   | 所有线颜色               | color |
 | line_size    | 所有线大小            | dimension |
